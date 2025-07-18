@@ -53,7 +53,7 @@ exports.signup = async (req, res) => {
 exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
-    const { rows } = await pool.query('SELECT id, password_hash FROM users WHERE email = $1', [email]);
+    const { rows } = await pool.query('SELECT id, password FROM users WHERE email = $1', [email]);
 
     if (!rows.length) {
       return res.status(400).send('Invalid password or email');
