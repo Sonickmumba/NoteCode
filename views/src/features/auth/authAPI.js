@@ -1,39 +1,14 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { signupUser } from './authAPI';
+export async function signupUser({ name, email, password }) {
+  const response = await fetch('/api/users', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, password }),
+  });
 
-export const signup = createAsyncThunk('auth/signup', async (formData, thunkAPI) => {
-  try {
-    const data = await signupUser(formData);
-    localStorage.setItem('token', data.token);
-    return data;
-  } catch (err) {
-    return thunkAPI.rejectWithValue(err.message || 'Signup failed');
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.message || 'Failed to signup');
   }
-});
 
-const authSlice = createSlice({
-  name: 'auth',
-  initialState: {
-    user: null,
-    status: 'idle',
-    error: null,
-  },
-  reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(signup.pending, (state) => {
-        state.status = 'loading';
-        state.error = null;
-      })
-      .addCase(signup.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.user = action.payload;
-      })
-      .addCase(signup.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.payload;
-      });
-  },
-});
-
-export default authSlice.reducer;
+  return response.json();
+}
