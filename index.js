@@ -2,6 +2,7 @@ const express = require('express');
 require("dotenv").config();
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const path = require('path');
 
 const snippetRoutes = require('./routes/snippetRoutes');
 const userRoutes = require('./routes/userRoutes');
@@ -21,11 +22,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.use('/api', snippetRoutes);
-app.use('/api/', userRoutes);
+app.use('/api/user', userRoutes);
+
+
+// Serve React static files
+app.use(express.static(path.join(__dirname, 'views', 'dist')));
 
 
 app.get("/", async(req, res) => {
-  res.json({ message: 'API is working!' });
+  // res.json({ message: 'API is working!' });
+  res.sendFile(path.join(__dirname, 'views', 'dist', 'index.html'));
 })
 
 
