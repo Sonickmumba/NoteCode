@@ -10,7 +10,6 @@ const Snippet = {
 
   getSnippet: async (id) => {
     const { rows } = await pool.query('SELECT * FROM snippets WHERE id = $1', [id]);
-
     return rows;
   }
 }

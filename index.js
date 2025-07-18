@@ -3,6 +3,8 @@ require("dotenv").config();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+const snippetRoutes = require('./routes/snippetRoutes');
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -17,11 +19,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
+app.use('/api', snippetRoutes);
+
+
 app.get("/", async(req, res) => {
   res.json({ message: 'API is working!' });
 })
 
 
 app.listen(PORT, () => {
-  console.log(`NoteCode app running ar ${PORT}`);
+  console.log(`🚀 Server is running at http://localhost:${PORT}`);
 })

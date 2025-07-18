@@ -19,13 +19,12 @@ exports.getSnippet = async (req, res) => {
 
   try {
     const result = await Snippet.getSnippet(id);
-
-    if (result.rows.length === 0) {
+    if (result === 0) {
       return res.status(404).json({ message: 'Snippet not found'});
     }
 
-    res.json(result.rows[0]);
-  } catch (error) {
+    res.json(result[0]);
+  } catch (err) {
     console.error(err);
     res.status(500).send('Server error');
   }
