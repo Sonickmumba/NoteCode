@@ -41,7 +41,6 @@ exports.signup = async (req, res) => {
     const hashedPassword = await hashPassword(password);
 
     const rows = await createUser({name, email, password: hashedPassword});
-    console.log(rows)
     const token = generateToken(rows.id);
 
     res.status(201).json({ token });

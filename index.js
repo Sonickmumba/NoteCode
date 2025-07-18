@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3001;
 
 // CORS configuration
 const corsOptions = {
-  origin: 'http://localhost:3000', // React app's URL
+  origin: 'http://localhost:5173', // React app's URL
   credentials: true, // Allow cookies to be sent with the request
 };
 app.use(cors(corsOptions));
