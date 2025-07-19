@@ -13,25 +13,6 @@ export async function signupUser({ name, email, password }) {
   return response.json();
 }
 
-// export async function loginUser({ email, password }) {
-//   try {
-//     const response = await fetch('http://localhost:3001/api/user/login', {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/json' },
-//       body: JSON.stringify({ email, password }),
-//     });
-
-//     if (!response.ok) {
-//       console.log(response.ok)
-//       const errorData = await response.json();
-//       throw new Error(errorData.message || 'Wrong password or Email');
-//     }
-
-//     return response.json();
-//   } catch (error) {
-//     throw new Error('Request failure. Please try again.');
-//   }  
-// }
  
 export async function loginUser({ email, password }) {
   const response = await fetch('http://localhost:3001/api/user/login', {
@@ -44,4 +25,8 @@ export async function loginUser({ email, password }) {
     const errorData = await response.json();
     throw new Error(errorData.message || 'Wrong password or Email');
   }
+
+  return response.json();
 }
+
+

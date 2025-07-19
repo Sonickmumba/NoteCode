@@ -56,24 +56,31 @@ exports.login = async (req, res) => {
     const { rows } = await pool.query('SELECT id, password FROM users WHERE email = $1', [email]);
 
     if (!rows.length) {
-      return res.status(400).send('Invalid password or email');
+      return res.status(400).json({ message: 'Invalid email or password' });
     }
+
+    const user = rows[0];
 
     const isValidPassword = await comparePasswords(password, rows[0].password);
 
     if (!isValidPassword) {
-      return res.status(400).json({message: 'Invalid email or password' });
+      return res.status(400).json({ message: 'Invalid email or password' });
     }
 
     const token = generateToken(rows[0].id);
-    res.json({
-      id: rows[0].id,
-      name: rows[0].name,
-      email: rows[0].email,
+    // res.json({ token });
+    // res.status(200).json({ token, user: { id: user.rows[0].id, email: user.rows[0].email } });
+
+    return res.status(200).json({
       token,
+      user: {
+        id: user.id,
+        email: user.email,
+        // add more fields if needed
+      },
     });
   } catch (err) {
-    console.error(err);
-    res.status(500).send('Error logging in.');
+    console.error(err.message);
+    res.status(500).json({ message: 'Error logging in.' });
   }
 }
