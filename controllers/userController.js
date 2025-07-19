@@ -62,11 +62,16 @@ exports.login = async (req, res) => {
     const isValidPassword = await comparePasswords(password, rows[0].password);
 
     if (!isValidPassword) {
-      return res.status(400).send('Invalid email or password.');
+      return res.status(400).json({message: 'Invalid email or password' });
     }
 
     const token = generateToken(rows[0].id);
-    res.json({ token });
+    res.json({
+      id: rows[0].id,
+      name: rows[0].name,
+      email: rows[0].email,
+      token,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).send('Error logging in.');
