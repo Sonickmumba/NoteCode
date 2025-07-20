@@ -16,7 +16,6 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log("🔁 App loaded, checking session...");
     dispatch(checkSession());
   }, [dispatch]);
 
