@@ -1,25 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 
-import { Routes, Route } from 'react-router-dom';
-import Login from './features/pages/Login';
-// import Dashboard from './pages/Dashboard';
-import Home from '../src/features/pages/Home';
-import Signup from './features/pages/Signup';
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import Login from "./features/pages/Login";
+import Dashboard from './features/pages/Dashboard';
+import Home from "../src/features/pages/Home";
+import Signup from "./features/pages/Signup";
+import ProtectedRoute from "./features/util/ProtectedRoute";
+import { checkSession } from "./features/auth/authSlice";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log("🔁 App loaded, checking session...");
+    dispatch(checkSession());
+  }, [dispatch]);
 
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 }
 
-export default App
+export default App;

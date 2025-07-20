@@ -12,7 +12,7 @@ const generateToken = (userId) => {
 }
 
 const verifyToken = (req, res, next) => {
-  const token = req.headers.authorization?.split(' ')[1];
+  const token = req.cookies?.token;
 
   if (!token) {
     return res.status(401).send('Access denied. No token provided.');
