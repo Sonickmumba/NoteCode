@@ -1,6 +1,8 @@
 const express = require('express');
 require("dotenv").config();
 const bodyParser = require("body-parser");
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const path = require('path');
 
@@ -13,12 +15,30 @@ const PORT = process.env.PORT || 3001;
 
 // CORS configuration
 const corsOptions = {
-  origin: 'http://localhost:3000', // React app's URL
+  origin: 'http://localhost:5173', // React app's URL
   credentials: true, // Allow cookies to be sent with the request
 };
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(cookieParser()); 
+
+// session configuration
+
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET || "default_secret",
+//     resave: false,
+//     saveUninitialized: false,
+//     cookie: {
+//       httpOnly: true,
+//       secure: process.env.NODE_ENV === "production",
+//       sameSite: process.env.NODE_ENV === "production" ? "Strict" : "Lax",
+//       maxAge: 1000 * 60 * 60,
+//     },
+//   })
+// );
 
 
 app.use('/api', snippetRoutes);
