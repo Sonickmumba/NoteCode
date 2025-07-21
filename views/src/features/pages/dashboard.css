@@ -16,3 +16,33 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+header {
+  background-color: #F9F8FD;
+}
+
+.logo-name {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo-name img {
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.logo-name p {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  color: #333;
+  margin: 0;
+  flex-wrap: wrap;
+  width: 55%;
+  text-align: center;
+}
