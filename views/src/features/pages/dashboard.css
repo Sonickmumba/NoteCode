@@ -42,7 +42,6 @@ header {
   font-family: "Outfit", sans-serif;
   color: #333;
   margin: 0;
-  flex-wrap: wrap;
   width: 55%;
   text-align: center;
 }
