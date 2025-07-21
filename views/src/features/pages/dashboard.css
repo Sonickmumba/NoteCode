@@ -1,0 +1,22 @@
+/* .main-container {
+  width: 100%;
+  max-width: 640px;
+  min-height: 100vh;
+  background-image: url('../../assets/Hero-Background-notecode@2x.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+.main-container {
+  width: 100%;
+  /* max-width: 421px; */
+  min-height: 900px;
+  margin: 0 auto;
+  position: relative;
+  /* background-image: url('../../assets/Hero-Background-notecode@2x.png'); */
+  background-image: url('../../assets/Hero-Background-notecode.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
