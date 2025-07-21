@@ -5,6 +5,7 @@ import React from "react";
 
 import "./dashboard.css";
 import NoteCodeLogo from "../../assets/NoteCodeLogo.svg";
+import CodeEditor from "../codeEditor/CodeEditor";
 
 const DashboardLayout = ({ children }) => {
   // const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const DashboardLayout = ({ children }) => {
           </div>
         </header>
         {children}
+        <CodeEditor />
       </main>
     </div>
   );
