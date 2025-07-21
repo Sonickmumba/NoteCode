@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import reactLogo from "./assets/react.svg";
+// import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 
 import { Routes, Route } from "react-router-dom";
@@ -16,7 +16,6 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log("🔁 App loaded, checking session...");
     dispatch(checkSession());
   }, [dispatch]);
 

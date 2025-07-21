@@ -1,0 +1,47 @@
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #7c3aed;
+}
+
+.main {
+  width: 475px;
+  min-height: 95%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #7c3aed;
+  background-image: url('../../assets/Hero-Background-notecode.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header {
+  background-color: #F9F8FD;
+}
+
+.logo-name {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo-name img {
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.logo-name p {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  color: #333;
+  margin: 0;
+  width: 55%;
+  text-align: center;
+}
