@@ -1,20 +1,16 @@
-/* .main-container {
-  width: 100%;
-  max-width: 640px;
-  min-height: 100vh;
-  background-image: url('../../assets/Hero-Background-notecode@2x.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
 
 .main-container {
   width: 100%;
-  /* max-width: 421px; */
-  min-height: 900px;
+  height: 100vh;
+  background-color: #7c3aed;
+}
+
+.main {
+  width: 475px;
+  min-height: 95%;
   margin: 0 auto;
   position: relative;
-  /* background-image: url('../../assets/Hero-Background-notecode@2x.png'); */
+  background-color: #7c3aed;
   background-image: url('../../assets/Hero-Background-notecode.svg');
   background-size: cover;
   background-repeat: no-repeat;

@@ -1,6 +1,7 @@
 const express = require('express');
 require("dotenv").config();
 const bodyParser = require("body-parser");
+const setupDatabase = require('./models/setupDatabase');
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -55,6 +56,18 @@ app.get("/", async(req, res) => {
 })
 
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server is running at http://localhost:${PORT}`);
-})
+// app.listen(PORT, () => {
+//   console.log(`🚀 Server is running at http://localhost:${PORT}`);
+// })
+
+setupDatabase()
+  .then(() => {
+    // only start server if DB setup succeeds
+    app.listen(PORT, () => {
+      console.log(`🚀 Server is running at http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error("❌ Server not started due to DB error:", err);
+    process.exit(1);
+  });
