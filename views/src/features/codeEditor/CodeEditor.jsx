@@ -14,9 +14,9 @@ const CodeEditor = () => {
     <div className="editor-main-container">
       {/* Optional: Language and Theme Selectors */}
       
-      <div className="editor-div">
+      <div className="editor-wrapper">
       <Editor
-        height="400px"
+        height="600px"
         theme={theme}
         language={language}
         value={code}
@@ -24,12 +24,12 @@ const CodeEditor = () => {
         options={{
           minimap: { enabled: false },
           wordWrap: "on",
-          fontSize: 14,
+          fontSize: 16,
         }}
       />
       </div>
 
-      <div >
+      <div className="theme-language">
         <select
           value={language}
           onChange={(e) => dispatch(setLanguage(e.target.value))}
@@ -49,7 +49,6 @@ const CodeEditor = () => {
         >
           <option value="vs-dark">Dark</option>
           <option value="vs-light">Light</option>
-          {/* Add custom themes here if registered */}
         </select>
       </div>
     </div>

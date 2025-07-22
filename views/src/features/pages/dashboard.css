@@ -1,25 +1,26 @@
 
 .main-container {
-  width: 100%;
+  width: 475px;
+  margin: 0 auto;
   height: 100vh;
   background-color: #7c3aed;
+  z-index: -1;
 }
 
 .main {
-  width: 475px;
-  min-height: 95%;
-  margin: 0 auto;
-  position: relative;
-  background-color: #7c3aed;
+  width: 100%;
+  min-height: 90vh;
+  position: absolute;
   background-image: url('../../assets/Hero-Background-notecode.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 2;
 }
 
 header {
   background-color: #F9F8FD;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .logo-name {
@@ -47,9 +48,63 @@ header {
   text-align: center;
 }
 
-.editor-main-container {
-  width: 80%;
+
+
+
+
+
+
+/* editor css */
+/* .editor-wrapper {
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 1rem;
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  width: 70%;
   margin: 0 auto;
-  height: 100%;
-  z-index: 100;
+  z-index: 10;
+} */
+
+.editor-wrapper {
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  width: calc(100% - 44px); /* more robust than fixed width */
+  z-index: 10;
 }
+.editor-main-container {
+  position: relative;
+  /* width: 85%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 80%;
+  border-radius: 12px;
+  z-index: 10; */
+}
+
+
+
+.theme-language {
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  z-index: 20;
+}
+
+/* .monaco-editor {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+} */
+
+
+
+
