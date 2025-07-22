@@ -1,0 +1,93 @@
+/* .editor-main-container {
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 550px;
+}
+
+.editor-div {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.editor-div > section {
+  height: 550px;
+}
+
+.editor-div > section > div {
+  height: 500px;
+}
+
+.editor-main-container > div {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.editor-main-container select:hover,
+.editor-main-container select:focus {
+  border-color: #007acc;
+  outline: none;
+} */
+
+
+/* Base mobile-first styles */
+.editor-main-container {
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 100;
+}
+
+/* Wrapper around the Monaco Editor */
+.editor-div {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Monaco section wrapper */
+.editor-div > section {
+  height: 60vh;
+  /* min-height: 400px; */
+}
+
+/* Monaco's internal container */
+.editor-div > section > div {
+  height: 100%;
+}
+
+/* Language & Theme select dropdowns */
+.editor-main-container > div {
+  display: flex;
+  flex-direction: row;
+  gap: 0.85rem;
+}
+
+.editor-main-container select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.editor-main-container select:hover,
+.editor-main-container select:focus {
+  border-color: #007acc;
+  outline: none;
+}

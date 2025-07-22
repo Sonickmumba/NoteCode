@@ -3,14 +3,33 @@ import Editor from "@monaco-editor/react";
 import { useSelector, useDispatch } from "react-redux";
 import { setCode, setLanguage, setTheme } from "./notesSlice";
 
+import "./CodeEditor.css";
+
+
 const CodeEditor = () => {
   const dispatch = useDispatch();
   const { code, language, theme } = useSelector((state) => state.note);
 
   return (
-    <div>
+    <div className="editor-main-container">
       {/* Optional: Language and Theme Selectors */}
-      <div style={{ marginBottom: "1rem" }}>
+      
+      <div className="editor-div">
+      <Editor
+        height="400px"
+        theme={theme}
+        language={language}
+        value={code}
+        onChange={(value) => dispatch(setCode(value))}
+        options={{
+          minimap: { enabled: false },
+          wordWrap: "on",
+          fontSize: 14,
+        }}
+      />
+      </div>
+
+      <div >
         <select
           value={language}
           onChange={(e) => dispatch(setLanguage(e.target.value))}
@@ -33,19 +52,6 @@ const CodeEditor = () => {
           {/* Add custom themes here if registered */}
         </select>
       </div>
-
-      <Editor
-        height="400px"
-        theme={theme}
-        language={language}
-        value={code}
-        onChange={(value) => dispatch(setCode(value))}
-        options={{
-          minimap: { enabled: false },
-          wordWrap: "on",
-          fontSize: 14,
-        }}
-      />
     </div>
   );
 };

@@ -19,6 +19,7 @@
 
 header {
   background-color: #F9F8FD;
+  margin-bottom: 40px;
 }
 
 .logo-name {
@@ -44,4 +45,11 @@ header {
   margin: 0;
   width: 55%;
   text-align: center;
+}
+
+.editor-main-container {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 100;
 }
