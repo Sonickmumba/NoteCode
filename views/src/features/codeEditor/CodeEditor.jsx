@@ -11,6 +11,7 @@ const CodeEditor = () => {
 
   const handleShare = () => {
     // Placeholder logic
+    console.log(code)
     alert("Share functionality coming soon!");
   };
 

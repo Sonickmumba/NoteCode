@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import initialCode from "./initialCode";
 
 const initialState = {
-  code: "// Start coding...",
+  code: initialCode,
   language: "javascript",
-  theme: "vs-dark", // Can be "vs-light", "vs-dark", or any Monaco custom theme
+  theme: "vs-dark",
 };
 
 const notesSlice = createSlice({
