@@ -1,5 +1,5 @@
 
-.main-container {
+/* .main-container {
   width: 475px;
   margin: 0 auto;
   height: 100vh;
@@ -46,7 +46,7 @@ header {
   margin: 0;
   width: 55%;
   text-align: center;
-}
+} */
 
 
 
@@ -69,7 +69,7 @@ header {
   z-index: 10;
 } */
 
-.editor-wrapper {
+/* .editor-wrapper {
   border-radius: 12px;
   border: 1px solid #ccc;
   overflow: hidden;
@@ -77,33 +77,23 @@ header {
   position: absolute;
   left: 22px;
   right: 22px;
-  width: calc(100% - 44px); /* more robust than fixed width */
+  width: calc(100% - 44px);
   z-index: 10;
-}
-.editor-main-container {
-  position: relative;
-  /* width: 85%;
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  height: 80%;
-  border-radius: 12px;
-  z-index: 10; */
-}
-
-
-
-.theme-language {
-  position: absolute;
-  bottom: 0;
-  margin-left: 10px;
-  z-index: 20;
-}
-
-/* .monaco-editor {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
 } */
+
+/* .editor-wrapper {
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  width: 475px;
+  margin: 0 auto;
+  padding: 0;
+  z-index: 10;
+} */
+
 
 
 
