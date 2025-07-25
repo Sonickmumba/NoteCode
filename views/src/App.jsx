@@ -5,7 +5,7 @@ import viteLogo from "/vite.svg";
 
 import { Routes, Route } from "react-router-dom";
 import Login from "./features/pages/Login";
-import Dashboard from './features/pages/Dashboard';
+import Dashboard from "./features/pages/Dashboard";
 import Home from "../src/features/pages/Home";
 import Signup from "./features/pages/Signup";
 import ProtectedRoute from "./features/util/ProtectedRoute";
@@ -32,6 +32,9 @@ function App() {
           </ProtectedRoute>
         }
       />
+
+      {/* Public shared snippet route */}
+      <Route path="/code/:id" element={<Dashboard />} />
     </Routes>
   );
 }

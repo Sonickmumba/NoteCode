@@ -1,39 +1,264 @@
-/* .editor-main-container {
-  max-width: 900px;
-  margin: 0 auto;
+header {
+  text-align: center;
+  padding: 5px 5px;
+}
+
+.logo-name {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo-name img {
+  width: 120px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.logo-name p {
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  color: #333;
+  margin: 0;
+  width: 70%;
+  text-align: center;
+}
+
+.main-container {
+  background-image: url("../../assets/Hero-Background-notecode.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 96vh; /* added*/
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100%;
+}
+
+.editor-main-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  height: 550px;
+  gap: 1.5rem;
+  align-items: center;
 }
 
-.editor-div {
-  border-radius: 12px;
+.editor-wrapper {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  width: 100%;
   overflow: hidden;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /*added*/
 }
 
-.editor-div > section {
-  height: 550px;
-}
-
-.editor-div > section > div {
-  height: 500px;
-}
-
-.editor-main-container > div {
+.controls-row {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content:space-between;
+  gap: 2.5rem;
+  align-items: center;
+  position: absolute;
+  top: 570px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  min-width: 85%;
 }
 
-.editor-main-container select:hover,
-.editor-main-container select:focus {
-  border-color: #007acc;
-  outline: none;
-} */
+/* Dropdown styles */
+.custom-dropdown {
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.825rem;
+  font-family: "outfit", sans-serif;
+  font-weight: 600px;
+  background-color: #ced6e1;
+  color: #121826;
+  appearance: none;
+  cursor: pointer;
+  transition: border 0.3s ease;
 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 30px;
+}
 
+.custom-dropdown:hover {
+  border-color: #888;
+}
+
+.dropdown-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdown-icon2 {
+  position: absolute;
+  left: 170px;
+}
+
+.dropdown-icon1 {
+  position: absolute;
+  left: 80px;
+  top: 10px;
+}
+
+.share-copy-div {
+  display: flex;
+  gap: 10px;
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 120px;
+  color: #364153;
+  cursor: copy;
+  font-size: 12px;
+}
+
+.copy-button img {
+  color: #CED6E1;
+}
+
+.copy-button p {
+  width: 70px;
+}
+
+/* Share button style */
+.share-button {
+  display: flex;
+  background-color: #406aff;
+  color: white;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.2rem;
+  font-family: "outfit", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.share-button:disabled {
+  background-color: #B3C3FF;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.share-button img {
+  padding: 4px;
+
+}
+
+.share-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive behavior */
+@media (min-width: 768px) {
+  .main-container {
+    height: 89vh;
+  }
+
+  .editor-wrapper {
+    width: 90%;
+    max-width: 700px;
+  }
+
+  .controls-row {
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 20%; */
+    min-width: 60%;
+  }
+
+  .dropdown-group {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1055px) {
+  .controls-row {
+    min-width: 80%;
+  }
+}
+
+@media (min-width: 833px) and (max-width: 1033px) {
+  .controls-row {
+    min-width: 65%;
+  }
+}
+
+@media (min-width: 1031px) and (max-width: 1044px) {
+  .controls-row {
+    min-width: 62%;
+  }
+}
+
+@media (min-width: 1055px) and (max-width: 1055px) {
+  .controls-row {
+    min-width: 80%;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1357px) {
+  .controls-row {
+    min-width: 56%;
+  }
+}
+
+@media (min-width: 1357px) {
+  .controls-row {
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 42%; */
+     min-width: 35%;
+     bottom: 50px; 
+  }
+
+  .dropdown-group {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1470px) {
+ .main-container {
+  height: 100vh;
+  padding: 30px;
+}
+
+.main {
+  /* height: 100vh; */
+  width: 100%;
+}
+
+.editor-main-container {
+  width: 100%;
+  padding: 5rem 0;
+}
+
+.editor-wrapper {
+  width: 50%;
+}
+}
