@@ -6,8 +6,6 @@ const JWT_SECRET = process.env.JWT_SECRET;
 const generateToken = (userId) => {
   return jwt.sign({
       id: userId,
-      // name: user.name,
-      // email: user.email,
     }, JWT_SECRET, {expiresIn: '1h'});
 }
 
@@ -22,7 +20,7 @@ const verifyToken = (req, res, next) => {
     if (err) {
       return res.status(401).json({ message: "Unauthorized" });
     }
-    req.user = user; // Save user ID to request for later use
+    req.user = user;
     next();
   });
 }

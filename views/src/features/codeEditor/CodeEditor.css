@@ -69,6 +69,7 @@ header {
 .controls-row {
   display: flex;
   flex-direction: row;
+  justify-content:space-between;
   gap: 2.5rem;
   align-items: center;
   position: absolute;
@@ -76,11 +77,12 @@ header {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  min-width: 85%;
 }
 
 /* Dropdown styles */
 .custom-dropdown {
-  padding: 0.4rem 0.5rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 12px;
   font-size: 0.825rem;
   font-family: "outfit", sans-serif;
@@ -90,6 +92,10 @@ header {
   appearance: none;
   cursor: pointer;
   transition: border 0.3s ease;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 30px;
 }
 
 .custom-dropdown:hover {
@@ -98,16 +104,51 @@ header {
 
 .dropdown-group {
   display: flex;
-  flex-direction: rows;
+  align-items: center;
   gap: 1rem;
-  margin-right: 130px;
+}
+
+.dropdown-icon2 {
+  position: absolute;
+  left: 170px;
+}
+
+.dropdown-icon1 {
+  position: absolute;
+  left: 80px;
+  top: 10px;
+}
+
+.share-copy-div {
+  display: flex;
+  gap: 10px;
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 120px;
+  color: #364153;
+  cursor: copy;
+  font-size: 12px;
+}
+
+.copy-button img {
+  color: #CED6E1;
+}
+
+.copy-button p {
+  width: 70px;
 }
 
 /* Share button style */
 .share-button {
+  display: flex;
   background-color: #406aff;
   color: white;
-  padding: 0.6rem 1.7rem;
+  padding: 0.4rem 1rem;
   border: none;
   border-radius: 24px;
   font-size: 1.2rem;
@@ -115,6 +156,17 @@ header {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.share-button:disabled {
+  background-color: #B3C3FF;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.share-button img {
+  padding: 4px;
+
 }
 
 .share-button:hover {
@@ -125,7 +177,6 @@ header {
 @media (min-width: 768px) {
   .main-container {
     height: 89vh;
-    /* margin-bottom: 150px; */
   }
 
   .editor-wrapper {
@@ -136,8 +187,8 @@ header {
   .controls-row {
     flex-direction: row;
     justify-content: space-between;
-    width: 50%;
-    max-width: 700px;
+    /* width: 20%; */
+    min-width: 60%;
   }
 
   .dropdown-group {
@@ -146,12 +197,43 @@ header {
   }
 }
 
+@media (min-width: 769px) and (max-width: 1055px) {
+  .controls-row {
+    min-width: 80%;
+  }
+}
+
+@media (min-width: 833px) and (max-width: 1033px) {
+  .controls-row {
+    min-width: 65%;
+  }
+}
+
+@media (min-width: 1031px) and (max-width: 1044px) {
+  .controls-row {
+    min-width: 62%;
+  }
+}
+
+@media (min-width: 1055px) and (max-width: 1055px) {
+  .controls-row {
+    min-width: 80%;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1357px) {
+  .controls-row {
+    min-width: 56%;
+  }
+}
+
 @media (min-width: 1357px) {
   .controls-row {
     flex-direction: row;
     justify-content: space-between;
-    width: 42%;
-    max-width: 700px;
+    /* width: 42%; */
+     min-width: 35%;
+     bottom: 50px; 
   }
 
   .dropdown-group {

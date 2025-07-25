@@ -4,9 +4,10 @@ const { v4: uuidv4 } = require('uuid');
 exports.createSnippet = async (req, res) => {
   
   try {
-    const { user_id, code, language, theme } = req.body;
+    const user_id = req.user.id;
+    const { code, language, theme } = req.body;
 
-    if (!user_id || !code || !language || theme) {
+    if (!user_id || !code || !language || !theme) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
@@ -34,6 +35,6 @@ exports.getSnippet = async (req, res) => {
     res.json(snippet[0]);
   } catch (err) {
     console.error(err);
-    res.status(500).send('Server error');
+    res.status(500).json({ error: 'Server error' });
   }
 }

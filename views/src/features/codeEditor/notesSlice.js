@@ -20,10 +20,9 @@ const notesSlice = createSlice({
     setTheme: (state, action) => {
       state.theme = action.payload;
     },
-    resetEditor: () => initialState,
   },
 });
 
-export const { setCode, setLanguage, setTheme, resetEditor } = notesSlice.actions;
+export const { setCode, setLanguage, setTheme, resetEditor, resetHasChanged } = notesSlice.actions;
 export default notesSlice.reducer;
 
