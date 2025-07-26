@@ -197,33 +197,33 @@ header {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1055px) {
+@media (min-width: 769px) and (max-width: 833px) {
   .controls-row {
     min-width: 80%;
   }
 }
 
-@media (min-width: 833px) and (max-width: 1033px) {
+@media (min-width: 834px) and (max-width: 1030px) {
   .controls-row {
     min-width: 65%;
   }
 }
 
-@media (min-width: 1031px) and (max-width: 1044px) {
+@media (min-width: 1031px) and (max-width: 1119px) {
   .controls-row {
     min-width: 62%;
   }
 }
 
-@media (min-width: 1055px) and (max-width: 1055px) {
+/* @media (min-width: 1055px) and (max-width: 1055px) {
   .controls-row {
     min-width: 80%;
   }
-}
+} */
 
-@media (min-width: 1120px) and (max-width: 1357px) {
+@media (min-width: 1120px) and (max-width: 1356px) {
   .controls-row {
-    min-width: 56%;
+    min-width: 50%;
   }
 }
 
@@ -244,21 +244,22 @@ header {
 
 @media (min-width: 1470px) {
  .main-container {
-  height: 100vh;
-  padding: 30px;
+  height: 95vh;
+  padding: 80px 30px 0;
 }
 
 .main {
-  /* height: 100vh; */
+  /* height: 100vh; deleted*/
   width: 100%;
 }
 
-.editor-main-container {
+/* .editor-main-container {
   width: 100%;
   padding: 5rem 0;
-}
+} */
 
-.editor-wrapper {
+/* .editor-wrapper {
   width: 50%;
-}
+} */
+
 }
