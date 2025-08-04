@@ -1,4 +1,4 @@
-header {
+/* header {
   text-align: center;
   padding: 5px 5px;
 }
@@ -33,7 +33,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 96vh; /* added*/
+  height: 96vh;
 }
 
 .main {
@@ -63,13 +63,13 @@ header {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   width: 100%;
   overflow: hidden;
-  z-index: 1; /*added*/
+  z-index: 1;
 }
 
 .controls-row {
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
   gap: 2.5rem;
   align-items: center;
   position: absolute;
@@ -80,7 +80,6 @@ header {
   min-width: 85%;
 }
 
-/* Dropdown styles */
 .custom-dropdown {
   padding: 0.4rem 0.8rem;
   border-radius: 12px;
@@ -136,14 +135,13 @@ header {
 }
 
 .copy-button img {
-  color: #CED6E1;
+  color: #ced6e1;
 }
 
 .copy-button p {
   width: 70px;
 }
 
-/* Share button style */
 .share-button {
   display: flex;
   background-color: #406aff;
@@ -159,21 +157,19 @@ header {
 }
 
 .share-button:disabled {
-  background-color: #B3C3FF;
+  background-color: #b3c3ff;
   cursor: not-allowed;
   opacity: 0.7;
 }
 
 .share-button img {
   padding: 4px;
-
 }
 
 .share-button:hover {
   background-color: #0056b3;
 }
 
-/* Responsive behavior */
 @media (min-width: 768px) {
   .main-container {
     height: 89vh;
@@ -187,7 +183,6 @@ header {
   .controls-row {
     flex-direction: row;
     justify-content: space-between;
-    /* width: 20%; */
     min-width: 60%;
   }
 
@@ -215,12 +210,6 @@ header {
   }
 }
 
-/* @media (min-width: 1055px) and (max-width: 1055px) {
-  .controls-row {
-    min-width: 80%;
-  }
-} */
-
 @media (min-width: 1120px) and (max-width: 1356px) {
   .controls-row {
     min-width: 50%;
@@ -231,9 +220,8 @@ header {
   .controls-row {
     flex-direction: row;
     justify-content: space-between;
-    /* width: 42%; */
-     min-width: 35%;
-     bottom: 50px; 
+    min-width: 35%;
+    bottom: 50px;
   }
 
   .dropdown-group {
@@ -243,23 +231,253 @@ header {
 }
 
 @media (min-width: 1470px) {
- .main-container {
-  height: 95vh;
-  padding: 80px 30px 0;
+  .main-container {
+    height: 95vh;
+    padding: 80px 30px 0;
+  }
+
+  .main {
+    width: 100%;
+  }
+} */
+
+
+
+
+/* Mobile-first styles */
+header {
+  text-align: center;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+}
+
+.logo-name {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.logo-name img {
+  width: 120px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.logo-name p {
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  color: #333;
+  margin: 0;
+  width: 70%;
+  text-align: center;
+}
+
+.main-container {
+  background-image: url("../../assets/Hero-Background-notecode.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 96vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .main {
-  /* height: 100vh; deleted*/
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: start;
+  justify-items: center;
   width: 100%;
 }
 
-/* .editor-main-container {
+.editor-main-container {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1.5rem;
   width: 100%;
-  padding: 5rem 0;
-} */
+  max-width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  justify-items: center;
+}
 
-/* .editor-wrapper {
-  width: 50%;
-} */
+.editor-wrapper {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
 
+.controls-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+  align-items: center;
+  position: absolute;
+  top: 750px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  min-width: 85%;
+}
+
+/* Dropdown styles */
+.custom-dropdown {
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.825rem;
+  font-family: "outfit", sans-serif;
+  font-weight: 600;
+  background-color: #ced6e1;
+  color: #121826;
+  appearance: none;
+  cursor: pointer;
+  transition: border 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 30px;
+}
+
+.custom-dropdown:hover {
+  border-color: #888;
+}
+
+.dropdown-group {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.dropdown-icon2 {
+  position: absolute;
+  left: 170px;
+}
+
+.dropdown-icon1 {
+  position: absolute;
+  left: 80px;
+  top: 10px;
+}
+
+.share-copy-div {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.copy-button {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 120px;
+  color: #364153;
+  cursor: copy;
+  font-size: 12px;
+}
+
+.copy-button p {
+  width: 70px;
+}
+
+/* Share button style */
+.share-button {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  background-color: #406aff;
+  color: white;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.2rem;
+  font-family: "outfit", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.share-button:disabled {
+  background-color: #B3C3FF;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.share-button img {
+  padding: 4px;
+}
+
+.share-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive behavior */
+@media (min-width: 768px) {
+  .main-container {
+    height: 89vh;
+  }
+
+  .editor-wrapper {
+    width: 90%;
+    max-width: 700px;
+  }
+
+  .controls-row {
+    grid-template-columns: 1fr 1fr;
+    min-width: 60%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 833px) {
+  .controls-row {
+    min-width: 80%;
+  }
+}
+
+@media (min-width: 834px) and (max-width: 1030px) {
+  .controls-row {
+    min-width: 65%;
+  }
+}
+
+@media (min-width: 1031px) and (max-width: 1119px) {
+  .controls-row {
+    min-width: 62%;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1356px) {
+  .controls-row {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: 1357px) {
+  .main {
+    align-items: center;
+  }
+  
+  .controls-row {
+    grid-template-columns: 1fr 1fr;
+    min-width: 35%;
+    bottom: 50px;
+    top: auto;
+  }
+}
+
+@media (min-width: 1470px) {
+  .main-container {
+    height: 95vh;
+    padding: 80px 30px 0;
+  }
 }
