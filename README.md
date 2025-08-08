@@ -63,11 +63,11 @@ For more information on the importance of a professional README for your reposit
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [NoteCode] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[NoteCode]** This is a code sharing app that allows users to create, save, and share coding snippets.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -102,9 +102,11 @@ For more information on the importance of a professional README for your reposit
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[By default, users should see an HTML given snippet.]**
+- **[When users select the `Share` button, a new ID should be generated, and users can access the saved code with the generated ID.]**
+- **[After code is saved and shared, `Share` button should be disabled until users make an edit .]**
+- **[Users can choose the language and theme they want to save and share.]**
+- **[The application should be responsive on all devices.]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -147,7 +149,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone [git@github.com:myaccount/my-project.git](https://github.com/Sonickmumba/NoteCode)
 ```
 --->
 
@@ -160,7 +162,7 @@ Example command:
 
 ```sh
   cd my-project
-  gem install
+  bundle install
 ```
 --->
 
@@ -172,7 +174,7 @@ To run the project, execute the following command:
 Example command:
 
 ```sh
-  rails server
+  npm run dev
 ```
 --->
 
@@ -210,7 +212,7 @@ Example:
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
+- GitHub: [@githubhandle](https://github.com/Sonickmumba)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
@@ -218,7 +220,7 @@ Example:
 
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/sonickmumba)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -228,8 +230,8 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
+- [ ] **[Login page]**
+- [ ] **[Sign up page]**
 - [ ] **[new_feature_3]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
