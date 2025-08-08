@@ -481,3 +481,61 @@ header {
     padding: 80px 30px 0;
   }
 }
+
+
+
+
+
+
+
+
+
+/* 1920px and larger screens */
+@media (min-width: 1920px) {
+  .logo-name img {
+    width: 150px;
+    height: 60px;
+  }
+
+  .logo-name p {
+    font-size: 3rem;
+  }
+
+  .editor-wrapper {
+    max-width: 900px;
+  }
+
+  .controls-row {
+    min-width: 30%;
+    gap: 3rem;
+  }
+
+  .custom-dropdown {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .share-button {
+    font-size: 1.4rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .copy-button {
+    font-size: 0.9rem;
+    min-width: 140px;
+  }
+
+  .dropdown-icon1 {
+    left: 100px;
+    top: 12px;
+  }
+
+  .dropdown-icon2 {
+    left: 200px;
+  }
+
+  .main-container {
+    height: 100vh;
+    padding: 100px 50px 0;
+  }
+}

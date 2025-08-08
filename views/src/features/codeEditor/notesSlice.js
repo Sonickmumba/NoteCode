@@ -23,6 +23,6 @@ const notesSlice = createSlice({
   },
 });
 
-export const { setCode, setLanguage, setTheme, resetEditor, resetHasChanged } = notesSlice.actions;
+export const { setCode, setLanguage, setTheme } = notesSlice.actions;
 export default notesSlice.reducer;
 

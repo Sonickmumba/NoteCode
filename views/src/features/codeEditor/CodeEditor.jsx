@@ -8,6 +8,7 @@ import link from "../../assets/link.svg";
 import share from "../../assets/share.svg";
 import downarrow from "../../assets/downarrow.svg";
 
+
 import "./CodeEditor.css";
 
 const CodeEditor = () => {
@@ -47,7 +48,7 @@ const CodeEditor = () => {
 
   const handleShare = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/snippets", {
+      const response = await fetch('http://localhost:3001/api/snippets', {
         method: "POST",
         credentials: "include",
         headers: {
