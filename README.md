@@ -28,15 +28,6 @@ After you're finished please remove all the comments and instructions!
 For more information on the importance of a professional README for your repositories: https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/articles/readme_best_practices.md
 -->
 
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -65,15 +56,11 @@ For more information on the importance of a professional README for your reposit
 
 # 📖 [NoteCode] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
 **[NoteCode]** This is a code sharing app that allows users to create, save, and share coding snippets.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -99,8 +86,6 @@ For more information on the importance of a professional README for your reposit
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
 
 - **[By default, users should see an HTML given snippet.]**
 - **[When users select the `Share` button, a new ID should be generated, and users can access the saved code with the generated ID.]**
@@ -144,27 +129,23 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<!--
 Example commands:
 
 ```sh
   cd my-folder
   git clone [git@github.com:myaccount/my-project.git](https://github.com/Sonickmumba/NoteCode)
 ```
---->
 
 ### Install
 
 Install this project with:
 
-<!--
 Example command:
 
 ```sh
   cd my-project
   bundle install
 ```
---->
 
 ### Usage
 
@@ -212,9 +193,9 @@ Example:
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/Sonickmumba)
+- GitHub: [@Sonickmumba](https://github.com/Sonickmumba)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [sonickmumba](www.linkedin.com/in/sonickmumba)
 
 👤 **Author2**
 
